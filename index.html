@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Kaam - Employment App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <h2>🛠️ Kerala Kaam</h2>
+            <select id="langSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ml">മലയാളം (Malayalam)</option>
+                <option value="as">অসমীয়া (Assamese)</option>
+                <option value="bn">বাংলা (Bengali)</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+            </select>
+        </div>
+        <p id="appSubtitle">Find work or hire workers easily</p>
+    </header>
+
+    <div class="container">
+        <!-- Post Job Section -->
+        <div class="card">
+            <h3 id="postJobTitle">Post a New Job (For Employers)</h3>
+            <input type="text" id="jobTitle" placeholder="Job Title (e.g., Mason, Helper)">
+            <input type="text" id="jobLocation" placeholder="Location (e.g., Kochi, Ernakulam)">
+            <input type="text" id="jobSalary" placeholder="Wage / Salary (e.g., ₹800/day)">
+            <input type="text" id="jobPhone" placeholder="Mobile Number">
+            <button id="postJobBtn" onclick="postJob()">Post Job</button>
+        </div>
+
+        <!-- View Jobs Section -->
+        <div class="card">
+            <h3 id="viewJobTitle">Available Jobs (For Workers)</h3>
+            <div id="jobList">
+                <!-- Dynamic Jobs Will Appear Here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
